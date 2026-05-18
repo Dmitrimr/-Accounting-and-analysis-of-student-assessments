@@ -1,4 +1,7 @@
-﻿namespace WebAPI.Models.Students
+﻿using System;
+using System.Collections.Generic;
+
+namespace WebAPI.Models.Students
 {
     public class StudentProgress
     {
@@ -7,17 +10,15 @@
         public Student Student { get; set; }
 
         public int ModuleId { get; set; }
-        public string ModuleName { get; set; }        // Название модуля/предмета
-        public int CompletedModules { get; set; }     // Пройдено модулей
-        public int TotalModules { get; set; }         // Всего модулей
-        public double PercentageComplete { get; set; } // Процент выполнения
-        public double AverageGrade { get; set; }      // Средний балл
+        public string ModuleName { get; set; }
+        public int CompletedModules { get; set; }
+        public int TotalModules { get; set; }
+        public double PercentageComplete { get; set; }
+        public double AverageGrade { get; set; }
 
-        // Аналитика
-        public DateTime? LastUpdated { get; set; }    // Дата последнего обновления
-        public string Status { get; set; }            // Статус успеваемости
-        public string? Description { get; set; }      // Описание/заметки
-
+        public DateTime? LastUpdated { get; set; }
+        public string Status { get; set; }
+        public string? Description { get; set; }
 
         public List<GradeRecord> Grades { get; set; }
     }
